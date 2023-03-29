@@ -73,4 +73,29 @@ function myFirst(array, n = 1) {
   }
   return array.slice(0, n);
 }
+function myLast(array, n = 1) {
+  if (n === 1) {
+    return array[array.length - 1];
+  } else {
+    return array.slice(-n);
+  }
+}
+function myKeys(object) {
+  const keys = [];
+  for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+      keys.push(key);
+    }
+  }
+  return keys;
+}
+function myValues(object) {
+  const values = [];
+  for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+      values.push(object[key]);
+    }
+  }
+  return values;
+}
 
